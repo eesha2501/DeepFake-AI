@@ -68,10 +68,10 @@ By leveraging the power of **Google's Gemini AI**, it can:
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/ai-forensics-detector.git
+git clone https://github.com/YOUR_USERNAME/DeepFake-AI.git
 
 # Navigate to the project directory
-cd ai-forensics-detector
+cd DeepFake AI
 
 # Install dependencies
 npm install
