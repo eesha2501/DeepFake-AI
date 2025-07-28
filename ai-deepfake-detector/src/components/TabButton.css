@@ -1,0 +1,25 @@
+/* src/components/TabButton.css */
+.tab-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-bottom: -1px; /* To overlap the main container's border */
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #9ca3af; /* gray-400 */
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button:hover {
+  color: white;
+}
+
+.tab-button.active {
+  color: #38bdf8; /* sky-400 */
+  border-bottom-color: #38bdf8;
+}
