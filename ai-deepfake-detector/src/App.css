@@ -230,7 +230,6 @@
   to { transform: rotate(360deg); }
 }
 
-/* --- BACKGROUND EFFECTS --- */
 #particle-container {
   position: absolute;
   top: 0;
@@ -278,3 +277,36 @@
 @keyframes move1 { from { transform: translate(0, 0) rotate(0deg); } to { transform: translate(100px, 50px) rotate(30deg); } }
 @keyframes move2 { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-40%, -60%) rotate(-40deg); } }
 @keyframes move3 { from { transform: translate(0, 0) rotate(0deg); } to { transform: translate(-80px, -40px) rotate(20deg); } }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2.5rem;
+  }
+  .main-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 1rem;
+  }
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  .app-header p {
+    font-size: 1rem;
+  }
+  .main-content {
+    padding: 1rem;
+  }
+  .run-analysis-button {
+    width: 100%;
+    padding: 1rem;
+  }
+  .tab-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
