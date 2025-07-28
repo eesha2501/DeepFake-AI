@@ -1,7 +1,7 @@
 # DeepFake AI
 
 <p align="center">
-  <img src="logo.png" alt="AI Forensics Detector Logo" width="150"/>
+  <img src="ai-deepfake-detector/public/logo.png" alt="AI Forensics Detector Logo" width="150"/>
 </p>
 
 <h3 align="center">A powerful web-based tool to detect scams, deepfakes, and misinformation across text, images, and video.</h3>
