@@ -76,7 +76,7 @@
 
 .confidence-meter .meter-background {
   fill: none;
-  stroke: #374151; /* gray-700 */
+  stroke: #374151;
   stroke-width: 3;
 }
 .confidence-meter .meter-value {
@@ -106,7 +106,7 @@
 .result-details h4 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #93c5fd; /* sky-300 */
+  color: #93c5fd;
   margin: 0 0 1rem 0;
 }
 .result-details ul {
@@ -121,7 +121,7 @@
   display: flex;
   align-items: flex-start;
   padding: 0.75rem;
-  background-color: rgba(31, 41, 55, 0.5); /* gray-800 with opacity */
+  background-color: rgba(31, 41, 55, 0.5);
   border-radius: 0.375rem;
   transition: all 0.3s ease;
 }
@@ -136,4 +136,17 @@
 }
 .result-details .detail-text {
   color: #d1d5db;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 640px) {
+  .result-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .confidence-container {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
