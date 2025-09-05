@@ -115,5 +115,4 @@ This project is licensed under the **MIT License**.
 * **Google** – for the powerful Gemini API
 * **Firebase** – for robust BaaS and hosting services
 
-```
 
