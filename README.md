@@ -1,145 +1,119 @@
-# DeepFake AI
 
-<p align="center">
-  <img src="ai-deepfake-detector/public/logo.png" alt="AI Forensics Detector Logo" width="150"/>
-</p>
+# DeepFake-AI
 
-<h3 align="center">A powerful web-based tool to detect scams, deepfakes, and misinformation across text, images, and video.</h3>
+An advanced web application designed to detect digital deception by analyzing **text, images, and videos** for signs of scams, misinformation, or AI-generated deepfakes.  
 
-<p align="center">
-  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status"/>
-  <img src="https://img.shields.io/badge/React-18.2.0-blue?logo=react" alt="React"/>
-  <img src="https://img.shields.io/badge/Firebase-9.6.11-orange?logo=firebase" alt="Firebase"/>
-</p>
+This tool serves as a **first line of defense**, empowering users to verify the authenticity of digital content. It leverages the **Google Gemini AI** to provide a detailed forensic report, including:  
+- Verdict on content legitimacy  
+- Confidence score  
+- Specific red flags  
 
 ---
 
-## 🚀 Overview
+## ✨ Key Features  
 
-**DeepFake AI** is a modern, user-friendly application designed to help users identify digital deception. In an era of rampant misinformation and sophisticated scams, this tool provides a first line of defense by analyzing various forms of media for signs of manipulation. 
-
-By leveraging the power of **Google's Gemini AI**, it can:
-- Assess text for phishing red flags  
-- Detect AI-generated artifacts in images  
-- Analyze video frames for deepfake indicators
-
----
-
-## ✨ Key Features
-
-- **Multi-Media Analysis**: Analyze content from three different sources:
-  - 📝 **Text/URL**: Paste any block of text, email, or URL to check for scam and phishing characteristics.
-  - 🖼️ **Image**: Upload an image to detect signs of AI generation or manipulation.
-  - 📹 **Video**: Upload a video to analyze a keyframe for deepfake artifacts.
-
-- **AI-Powered Insights**: Get a detailed forensic breakdown including:
-  - Verdict
-  - Confidence score
-  - List of specific red flags
-
-- **Sleek, Modern UI**: Beautiful and responsive interface with dynamic background effects.
-
-- **Visitor Analytics**: Real-time visitor counter powered by Firebase Firestore.
-
-- **Drag & Drop Support**: Easily drag and drop image or video files for quick analysis.
+- **Multi-Media Analysis** – Scrutinize suspicious text, links, images (JPG, PNG, etc.), and videos (MP4, MOV, etc.).  
+- **AI-Powered Insights** – Forensic analysis powered by the **Google Gemini API**.  
+- **Comprehensive Reports** – Clear verdicts (e.g., *Authentic*, *High-Risk Scam*) with confidence scoring and detailed findings.  
+- **Real-Time Analytics** – Live visitor counter via **Firebase Firestore**.  
+- **Responsive Design** – Modern UI optimized for desktop, tablet, and mobile.  
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack  
 
-| Category        | Tech               |
-|-----------------|--------------------|
-| **Frontend**    | React              |
-| **Styling**     | CSS + CSS Modules  |
-| **Database**    | Firebase Firestore |
-| **AI Engine**   | Google Gemini API  |
-| **Icons**       | Lucide React       |
+- **Frontend**: React.js, CSS3 (media queries for responsiveness)  
+- **AI & Machine Learning**: Google Gemini API  
+- **Backend & Hosting**: Firebase (Firestore, Hosting)  
+- **Icons**: Lucide React  
+- **Version Control**: Git & GitHub  
 
 ---
 
-## ⚙️ Getting Started
+## 🚀 Getting Started  
 
-### Prerequisites
+Follow these steps to set up and run the project locally for development and testing.  
 
-- **Node.js**: [Download & Install](https://nodejs.org/)
-- **Git**: [Download & Install](https://git-scm.com/)
+### Prerequisites  
+- Node.js (v16 or later)  
+- npm or Yarn  
+- Firebase project with Firestore + Hosting enabled  
+- Google Gemini API key  
 
-### Installation
+### Installation & Setup  
 
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/DeepFake-AI.git
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/ai-forensics-detector.git
+   cd ai-forensics-detector
+````
 
-# Navigate to the project directory
-cd DeepFake AI
+2. **Install dependencies**
 
-# Install dependencies
-npm install
+   ```bash
+   npm install
+   ```
 
-# Run the app
-npm start
+3. **Set up environment variables**
+
+   * Create a new file: `src/firebaseConfig.js`
+   * Add your Firebase configuration.
+   * For local development, you can use `.env.local` (for API keys).
+
+4. **Run locally**
+
+   ```bash
+   npm start
+   ```
+
+   App will be available at: **[http://localhost:3000](http://localhost:3000)**
+
+---
+
+## 🌐 Deployment (Firebase Hosting)
+
+1. **Install Firebase CLI**
+
+   ```bash
+   npm install -g firebase-tools
+   ```
+
+2. **Login to Firebase**
+
+   ```bash
+   firebase login
+   ```
+
+3. **Initialize Firebase** in project root
+
+   ```bash
+   firebase init
+   ```
+
+   * Select **Hosting**
+   * Choose your existing Firebase project
+   * Set `public` directory → `build`
+   * Configure as **Single Page App**
+
+4. **Build & Deploy**
+
+   ```bash
+   npm run build
+   firebase deploy
+   ```
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 🙏 Acknowledgements
+
+* **Google** – for the powerful Gemini API
+* **Firebase** – for robust BaaS and hosting services
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
----
-
-## 🔑 Configuration
-
-### Firebase Setup
-
-1. Go to [Firebase Console](https://console.firebase.google.com/).
-2. Create a new project.
-3. Set up **Firestore Database** in **Production Mode**.
-4. Update the **security rules** as per the setup guide.
-5. Create a **Web App** in the project settings.
-6. Copy the config into `src/firebaseConfig.js`:
-
-```js
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_ID",
-  appId: "YOUR_APP_ID"
-};
 ```
-
-### Gemini API Setup
-
-1. Go to [Google AI Studio](https://makersuite.google.com/app).
-2. Get your **Gemini API Key**.
-3. Paste it into `src/App.js`:
-
-```js
-const GEMINI_API_KEY = "YOUR_API_KEY_HERE"; // around line 130
-```
-
----
-
-## 🚦 Usage
-
-1. Choose content type: **Text/Link**, **Image**, or **Video**.
-2. Paste your text or upload your file.
-3. Click **Run Analysis**.
-4. View the **forensic report** including red flags, verdict, and confidence score.
-
----
-
-## ⚠️ Disclaimer
-
-> This tool uses a powerful AI model, but it is **not infallible**. The analysis provided is for informational purposes only and should not be considered a guarantee. Always use your judgment when reviewing suspicious content.
-
----
-
-## 📄 License
-
-This project is **open-source** and free to use. Feel free to **fork**, **modify**, and **build upon it** to create your own custom solutions.
-
----
-
-<p align="center">
-  Built with ❤️ for a safer digital world.
-</p>
-
