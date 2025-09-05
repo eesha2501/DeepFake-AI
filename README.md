@@ -46,7 +46,7 @@ Follow these steps to set up and run the project locally for development and tes
    ```bash
    git clone https://github.com/YOUR_USERNAME/ai-forensics-detector.git
    cd ai-forensics-detector
-````
+   ````
 
 2. **Install dependencies**
 
